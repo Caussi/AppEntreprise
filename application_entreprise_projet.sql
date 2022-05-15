@@ -81,7 +81,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `country`, `city`, `postCode`, `street`, `admin`, `trader`, `traderValidation`, `firstName`, `lastName`, `dateAdhesion`) VALUES
-(2, 'clement.coss@hotmail.fr', 'test', 'France', 'Saint-Cyr-sur-Loire', 37540, '34 Rue de la Grosse Borne', 1, 1, 1, 'ClÃ©ment', 'Caussignac', '2022-05-15');
+(1, 'test@gmail.com', 'test', 'France', 'test', 37000, 'test', 1, 1, 1, 'TestPrenom', 'TestNom', '2022-05-15')
 
 --
 -- Index pour les tables déchargées
