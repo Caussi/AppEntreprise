@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+	<bean id="d" class="com.example.application_entreprise_projet.DAO.USER.UserDAOImpl" init-method="init">
+	</bean>
+
+	<bean id="e" class="com.example.application_entreprise_projet.DAO.PRODUCE.ProduceDAOImpl" init-method="init">
+	</bean>
+
+	<bean id="f" class="com.example.application_entreprise_projet.DAO.SHOPPINGBAG.ShoppingBagDAOImpl" init-method="init">
+	</bean>
+
+
+	<bean id="m" class="com.example.application_entreprise_projet.METIER.USER.UserMetierImpl" >
+		<property name="dao" ref="d"/>
+	</bean>
+	<bean id="p" class="com.example.application_entreprise_projet.METIER.PRODUCE.ProduceMetierImpl" >
+		<property name="dao" ref="e"/>
+	</bean>
+	<bean id="n" class="com.example.application_entreprise_projet.METIER.SHOPPINGBAG.ShoppingBagImpl" >
+		<property name="dao" ref="f"/>
+	</bean>
+</beans>
